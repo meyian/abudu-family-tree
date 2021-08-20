@@ -1,0 +1,102 @@
+[
+  {
+    "id": "0",
+    "rels": {
+      "father": "0.3497833101389247",
+      "mother": "0.333900055343858"
+    },
+    "data": {
+      "first name": "Hassan",
+      "last name": "Abudu",
+      "birthday": "1986",
+      "gender": "M",
+      "image": ""
+    }
+  },
+  {
+    "id": "0.3497833101389247",
+    "data": {
+      "gender": "M",
+      "first name": "Assibi",
+      "last name": "Abudu",
+      "birthday": "1933",
+      "image": ""
+    },
+    "rels": {
+      "children": [
+        "0",
+        "0.31963901799914773",
+        "0.49328510175692664"
+      ],
+      "spouses": [
+        "0.333900055343858",
+        "0.056103555551349826"
+      ]
+    }
+  },
+  {
+    "id": "0.333900055343858",
+    "rels": {
+      "spouses": [
+        "0.3497833101389247"
+      ],
+      "children": [
+        "0",
+        "0.31963901799914773"
+      ]
+    },
+    "data": {
+      "gender": "F",
+      "first name": "Timilie",
+      "last name": "Abudu",
+      "birthday": "1954",
+      "image": ""
+    }
+  },
+  {
+    "id": "0.31963901799914773",
+    "data": {
+      "gender": "F",
+      "first name": "Aisha",
+      "last name": "Abudu",
+      "birthday": "1980",
+      "image": ""
+    },
+    "rels": {
+      "mother": "0.333900055343858",
+      "father": "0.3497833101389247"
+    }
+  },
+  {
+    "id": "0.056103555551349826",
+    "data": {
+      "gender": "F",
+      "first name": "",
+      "last name": "",
+      "birthday": "",
+      "image": ""
+    },
+    "rels": {
+      "spouses": [
+        "0.3497833101389247"
+      ],
+      "children": [
+        "0.49328510175692664"
+      ]
+    }
+  },
+  {
+    "id": "0.49328510175692664",
+    "data": {
+      "gender": "M",
+      "first name": "Kamba",
+      "last name": "Abudu",
+      "birthday": "1981",
+      "image": ""
+    },
+    "rels": {
+      "mother": "0.056103555551349826",
+      "father": "0.3497833101389247"
+    }
+  }
+]
