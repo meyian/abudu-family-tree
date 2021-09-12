@@ -102,3 +102,17 @@ svg.main_svg text {
   margin: auto;
   position: relative;
 }
+
+.bio-page__people-list-item {
+  border-bottom: 1px solid gray;
+  padding: 1rem;
+  list-style-type: none;
+}
+
+.bio-page__image {
+  max-width: 400px;
+}
+
+.bio-page__bio {
+  max-width: 600px;
+}
