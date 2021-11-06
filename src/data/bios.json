@@ -12,7 +12,7 @@
   {
     "name": "Hassan",
     "img_src": "./imgs/bio-page/3a6b8787-07bf-4978-bc8e-29460d11ba4b.jpg",
-    "bio": "I'm Hassan, and I was born in 1986 to Timilie and Assibi Abudu. I'm currently based in Accra, Ghana, working as a software engineer. I spend all day making and fixing web applications for technology companies abroad. Fun fact: I love art, especially photography. And most definitely music as well. But I'm a fan of most arts."
+    "bio": "I'm Hassan (on the left), and I was born in 1986 to Timilie and Assibi Abudu. I'm currently based in Accra, Ghana, working as a software engineer. I spend all day making and fixing web applications for technology companies abroad. Fun fact: I love art, especially photography. And most definitely music as well. But I'm a fan of most arts."
   },
   {
     "name": "Bismark Kwame Abudu SNR",
@@ -38,5 +38,100 @@
     "name": "Derrick SadatAbudu",
     "img_src": "./imgs/bio-page/derrick.PHOTO-2021-08-22-18-06-35.jpg",
     "bio": "Derrick SadatAbudu"
+  },
+  {
+    "name": "Sulemana Abudu",
+    "img_src": "./imgs/bio-page/01-sule-ad146445-56a8-4d83-92a7-c73aa4923462.jpg",
+    "bio": "Sulemana, son of Baba Abudu."
+  },
+  {
+    "name": "Aisha Abudu Whitman",
+    "img_src": "./imgs/bio-page/02-aisha-56d8e719-3ae1-40da-a9ae-51b9b0b3abf4.jpg",
+    "bio": "Oh my gosh! This brings me sooo much joy!!😁 Thanks for setting this up little brother!🥰 I’m Aisha Abudu Whitman. My father is Assibi Abudu and my brothers are Hassan and Kamba. So happy to see you all. 😁"
+  },
+  {
+    "name": "Patricia Ayambila",
+    "img_src": "",
+    "bio": "Hi I am Patricia Ayambila, my mother relates to the Abudu family"
+  },
+  {
+    "name": "Winpalma Abudu",
+    "img_src": "./imgs/bio-page/03-winpalma-2ac6d24a-3d92-4e15-ae3e-f4e01e75046d.jpg",
+    "bio": "Hi Family ❤️. My name is Winpalma Abudu. Daughter of Martin Nyaaba Abudu. I lived in Navrongo for the most part, but now reside in the US with my family."
+  },
+  {
+    "name": "Emmanuel Abudu",
+    "img_src": "./imgs/bio-page/04-emmanuel-e77a89ef-746d-4fe8-86e0-330b6e84597c.jpg",
+    "bio": "I am Emmanuel Abudu,  my brothers  are Kwame Abudu Bismarck ,  Abudu Bismarck jnr   and Mr John A. Abudu Is my Father"
+  },
+  {
+    "name": "Samuel Abudu",
+    "img_src": "./imgs/bio-page/05-samuel-ab4abde7-da0a-453c-9111-9c01b74e9bb5.jpg",
+    "bio": "My name is Samuel Abudu son of the late Mr. Bawa. Good afternoon lovely family, I am in to gardening (planting of green grass and flowers), And also, I do fumigation and I operate chainsaw (cutting)......"
+  },
+  {
+    "name": "Francis Abudu",
+    "img_src": "./imgs/bio-page/derrick.PHOTO-2021-08-22-18-06-35.jpg",
+    "bio": "Good evening to you all family. My name is Abudu Francis Ntoba. Am senior pastor of Shepherds Word Chapel Accra Lapaz. Am so happy today to be connected to my family may the good lord keep us safe."
+  },
+  {
+    "name": "Ayariga Martin Terry",
+    "img_src": "./imgs/bio-page/06-martin-fcf30af7-9c8e-488f-a4fd-0700a1b9ea39.jpg",
+    "bio": "My name is Ayariga Martin Terry. I am the son of Tampugre Thomas Ayamga, who is the son of Mr.Tampugre,the direct younger brother of Mr. Abudu. I am an accountant by profession, and work mtn right here in the Upper East Region. Am married with three beautiful children ❤, but I will be adding three more women to my register.😀"
+  },
+  {
+    "name": "Assibi Boye Abudu",
+    "img_src": "./imgs/bio-page/07-boye-f606a37a-b0e4-4e07-b2f6-7bb7eceacd75.jpg",
+    "bio": "My name is Abudu Assibi (Boye) I am the son of the Abudu Fuseini (late) I live in Navrongo"
+  },
+  {
+    "name": "Abagna Donatus Anaya",
+    "img_src": "./imgs/bio-page/08-anaya-efedd48e-de80-4f28-a8ce-84598f710aa7.jpg",
+    "bio": "My Name is Abagna Donatus Anaya and my father is Abagna Tampugre."
+  },
+  {
+    "name": "Augustina Azuma",
+    "img_src": "./imgs/bio-page/09-augustina-d45b0769-d56d-40ea-9607-6ca47d195267.jpg",
+    "bio": "My name is Augustina Azuma. A granddaughter of the late Atampugre. I'm a health assistant at Ejura government hospital. Married with three children"
+  },
+  {
+    "name": "Selina Mbo",
+    "img_src": "./imgs/bio-page/10-selina-4905a6e9-3822-4f4f-9e1a-37d3cf98836c.jpg",
+    "bio": "My name is Selina Mbo, a granddaughter to the late Atampugre"
+  },
+  {
+    "name": "Aishatu Abudu",
+    "img_src": "./imgs/bio-page/11-aishatu-55317488-1425-45d2-8d5d-b800a1b44076.jpg",
+    "bio": "Hello am Aishatu Adeyeta Abambayam Abudu.presently am a nursing mom ."
+  },
+  {
+    "name": "Theresa Ayenpoka Amiwinni",
+    "img_src": "",
+    "bio": "I’m Theresa Ayenpoka Amiwinni a sales associate of Gold Coast foods herbs and spices"
+  },
+  {
+    "name": "Baba Abudu",
+    "img_src": "./imgs/bio-page/12-baba-b9685576-71dc-4e8a-bf92-93e5a015c0c9.jpg",
+    "bio": "Am Abudu Micheal (baba). A modern professional carpenter."
+  },
+  {
+    "name": "Esther Assibi Bawa",
+    "img_src": "./imgs/bio-page/13-esther-e588f5cb-64a6-4132-84d3-eda879641c58.jpg",
+    "bio": "Hello am Esther Assibi Bawa.A business woman"
+  },
+  {
+    "name": "Issah Abudu",
+    "img_src": "./imgs/bio-page/14-issah-77dc5e04-3024-4fb4-93d0-fe393ef15690.jpg",
+    "bio": "Hi, Thanks for the add. I am happy to be part of the family. 😀 As far as the family tree is concerned I would say my dad is late Micheal Imoro Abudu and the second son.   I have two siblings Derrick Sadat Abudu and Victoria Abudu. I see Sadat is part of us here.  I currently work as an IT specialist for the Food and Drugs Administration in Atlanta. Nice to meet you all."
+  },
+  {
+    "name": "Magdalene Abudu",
+    "img_src": "./imgs/bio-page/15-magdalene.jpg",
+    "bio": "Ok thank you very much. Am Magdalene Abudu. A sister to Kwame,  Laribas  daughter,  who is a sister  to sister ayampoka. The handsome man😊 in picture is my grandfather. Am a trained midwife  and am currently having my service  at Tema. Thank you. I am clear as much as possible"
+  },
+  {
+    "name": "James ",
+    "img_src": "./imgs/bio-page/16-james-mbangbe-d8359367-a2bb-4511-a69f-59db1c5a09a0.jpg",
+    "bio": "Thank you very much for the privilege to be part of this great family of ours. My mother is a daughter of the family. Ayanniya, is her name. Her father is the late Mr Abagna, her mother is Awudaana. I am a great grandson to Mr Abudu. I am a nurse by profession (paediatric nurse). I just finished with masters degree at university of Ghana, but yet to graduate."
   }
 ]

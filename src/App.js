@@ -18,14 +18,26 @@ const { MediaContextProvider, Media } = createMedia({
   },
 });
 
+const logo = "A /A Family";
+
 const linkStyle = {
   textDecoration: "none",
+  fontWeight: 700,
+  color: "#727236",
+};
+
+const logoStyle = {
+  color: "#58336C",
+  fontSize: "1.3rem",
+  fontFamily: "'Zen Antique', serif",
 };
 
 const FamilyTreePage = () => {
   return (
     <div>
-      <h1 style={{ textAlign: "center", fontFamily: "Helvetica" }}>
+      <h1
+        style={{ ...logoStyle, textAlign: "center", fontFamily: "Helvetica" }}
+      >
         The Abudu Family Tree
       </h1>
       <FamilyChart />
@@ -40,7 +52,7 @@ const links = [
     component: <FamilyTreePage />,
   },
   {
-    name: "Biographies",
+    name: "Members",
     url: "/bios",
     component: <BioPage />,
   },
@@ -80,8 +92,8 @@ const Header = () => {
     <header style={{ marginBottom: "1.5rem" }}>
       <MediaContextProvider>
         <Media at="sm">
-          <Link to="/" style={linkStyle}>
-            A/A Family
+          <Link to="/" style={{ ...linkStyle, ...logoStyle }}>
+            {logo}
           </Link>
           <nav>
             <ul style={mobileListStyle}>{listItems()}</ul>
@@ -95,8 +107,8 @@ const Header = () => {
               justifyContent: "space-between",
             }}
           >
-            <Link to="/" style={linkStyle}>
-              A/A Family
+            <Link to="/" style={{ ...linkStyle, ...logoStyle }}>
+              {logo}
             </Link>
             <nav style={{ display: "inline-block" }}>
               <ul style={{ display: "inline-block", margin: "0" }}>

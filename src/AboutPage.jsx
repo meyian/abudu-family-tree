@@ -1,5 +1,3 @@
-import bioData from "./data/bios.json";
-
 const AboutPage = () => {
   return (
     <div>
