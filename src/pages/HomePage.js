@@ -1,12 +1,13 @@
 import React from "react";
-import "./css/styles.css";
+import "../css/styles.css";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { createMedia } from "@artsy/fresnel";
 
-import FamilyChart from "./FamilyChart";
-import BioPage from "./Bio";
+import FamilyChart from "./FamilyTreePage";
+import BioPage from "./BioPage";
 import AboutPage from "./AboutPage";
+import Title from "../shared_components/Title";
 
 const { MediaContextProvider, Media } = createMedia({
   // breakpoints values can be either strings or integers
@@ -35,11 +36,11 @@ const logoStyle = {
 const FamilyTreePage = () => {
   return (
     <div>
-      <h1
+      <Title
         style={{ ...logoStyle, textAlign: "center", fontFamily: "Helvetica" }}
       >
         The Abudu Family Tree
-      </h1>
+      </Title>
       <FamilyChart />
     </div>
   );
@@ -132,7 +133,9 @@ const Home = () => {
         alignItems: "center",
       }}
     >
-      <h1 style={{ margin: "0 2rem" }}>The Abudu/Atampugre Family Website</h1>
+      <Title style={{ margin: "0 2rem" }}>
+        The Abudu/Atampugre Family Website
+      </Title>
       <p style={{ maxWidth: "750px", margin: "1rem" }}>
         Welcome to our family website. Here you will find our family tree and
         biographies of our family members.

@@ -12,6 +12,15 @@ body {
   cursor: pointer;
 }
 
+.unstyled-link{
+  text-decoration: none;
+  color: black;
+}
+
+.unstyled-link:hover{
+  text-decoration: underline;
+}
+
 svg.main_svg {
   width: 100%;
   height: 100%;
@@ -110,7 +119,7 @@ svg.main_svg text {
 }
 
 .bio-page__people-list-item {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(211, 211, 211);
   padding: 1rem;
   list-style-type: none;
 }
