@@ -18,13 +18,16 @@ const BioNav = ({ people, render }) => {
         borderRadius: "35px",
         margin: "0 2rem",
         padding: "1.5rem 1rem",
+        border: "1px solid #eee",
       }}
     >
       <ul
         style={{
+          marginLeft: "2rem",
           display: "grid",
+          gridTemplateRows: "repeat(10, 1fr)",
           gridTemplateColumns: "repeat(3, 1fr)",
-          gridTemplateRows: "repeat(auto-fill)",
+          gridAutoFlow: "column",
         }}
       >
         {renderedPeople}

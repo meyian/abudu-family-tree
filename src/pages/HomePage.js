@@ -96,7 +96,7 @@ const Header = () => {
           <Link to="/" style={{ ...linkStyle, ...logoStyle }}>
             {logo}
           </Link>
-          <nav>
+          <nav style={{ marginRight: "0.5rem" }}>
             <ul style={mobileListStyle}>{listItems()}</ul>
           </nav>
         </Media>
@@ -111,7 +111,7 @@ const Header = () => {
             <Link to="/" style={{ ...linkStyle, ...logoStyle }}>
               {logo}
             </Link>
-            <nav style={{ display: "inline-block" }}>
+            <nav style={{ display: "inline-block", marginRight: "0.5rem" }}>
               <ul style={{ display: "inline-block", margin: "0" }}>
                 {listItems("inline")}
               </ul>
