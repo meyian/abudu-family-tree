@@ -7,10 +7,10 @@ import { createMedia } from "@artsy/fresnel";
 import FamilyChart from "./FamilyTreePage";
 import BioPage from "./BioPage";
 import AboutPage from "./AboutPage";
+import PollPage from "./PollPage";
 import Title from "../shared_components/Title";
 
 const { MediaContextProvider, Media } = createMedia({
-  // breakpoints values can be either strings or integers
   breakpoints: {
     sm: 0,
     md: 426,
@@ -56,6 +56,11 @@ const links = [
     name: "Members",
     url: "/bios",
     component: <BioPage />,
+  },
+  {
+    name: "Poll",
+    url: "/poll",
+    component: <PollPage />,
   },
   {
     name: "About Us",
