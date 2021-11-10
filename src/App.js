@@ -1,22 +1,20 @@
 import React from "react";
-import "../css/styles.css";
+import "./css/styles.css";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { createMedia } from "@artsy/fresnel";
 
-import FamilyChart from "./FamilyTreePage";
-import BioPage from "./BioPage";
-import AboutPage from "./AboutPage";
-import PollPage from "./PollPage";
-import Title from "../shared_components/Title";
+import FamilyChart from "./pages/FamilyTreePage";
+import BioPage from "./pages/BioPage";
+import AboutPage from "./pages/AboutPage";
+import PollPage from "./pages/PollPage";
+import HomePage from "./pages/HomePage";
+
+import Title from "./shared_components/Title";
+import settings from "./config/variables";
 
 const { MediaContextProvider, Media } = createMedia({
-  breakpoints: {
-    sm: 0,
-    md: 426,
-    lg: 1024,
-    xl: 1192,
-  },
+  breakpoints: settings.breakpoints,
 });
 
 const logo = "A /A Family";
@@ -128,27 +126,6 @@ const Header = () => {
   );
 };
 
-const Home = () => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "center",
-      }}
-    >
-      <Title style={{ margin: "0 2rem" }}>
-        The Abudu/Atampugre Family Website
-      </Title>
-      <p style={{ maxWidth: "750px", margin: "1rem" }}>
-        Welcome to our family website. Here you will find our family tree and
-        biographies of our family members.
-      </p>
-    </div>
-  );
-};
-
 export default function App() {
   return (
     <Router>
@@ -160,9 +137,15 @@ export default function App() {
           return <Route path={linkObj.url}>{linkObj.component}</Route>;
         })}
         <Route path="/">
-          <Home />
+          <HomePage />
         </Route>
       </Switch>
     </Router>
   );
 }
+
+/*
+
+nW4J0djTpfTLZ3uUlle7obIqLx0Deiy0JT6EQweUdbWMhRckCww36nAEWhPfpeMz
+
+*/

@@ -1,14 +1,4 @@
-/*
-
-* Make an island:
-  - wide
-  - narraw
-* Pass in the rendering function as a prop, so that we can link to the 
-* 
-
-*/
-
-const BioNav = ({ people, render }) => {
+const BioNav = ({ people, render, columns = 3 }) => {
   const renderedPeople = people.map((person) => render(person));
 
   return (
@@ -16,18 +6,19 @@ const BioNav = ({ people, render }) => {
       style={{
         backgroundColor: "white",
         borderRadius: "35px",
-        margin: "0 2rem",
-        padding: "1.5rem 1rem",
+        margin: `${columns === 2 ? null : "0 2rem"}`,
+        padding: `${columns === 2 ? "1rem 1rem" : "1.5rem 1rem"}`,
         border: "1px solid #eee",
       }}
     >
       <ul
         style={{
-          marginLeft: "2rem",
+          marginLeft: `${columns === 2 ? null : "1.5rem"}`,
           display: "grid",
-          gridTemplateRows: "repeat(10, 1fr)",
-          gridTemplateColumns: "repeat(3, 1fr)",
+          gridTemplateRows: `repeat(${columns === 2 ? 15 : 10}, 1fr)`,
+          gridTemplateColumns: `repeat(${columns}, 1fr)`,
           gridAutoFlow: "column",
+          gridGap: "10px 30px",
         }}
       >
         {renderedPeople}

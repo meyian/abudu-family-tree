@@ -1,6 +1,6 @@
 import React from "react";
 import f3 from "family-chart";
-import data from "../data.json";
+import data from "../data/data.json";
 
 export default class FamilyTree extends React.Component {
   cont = React.createRef();

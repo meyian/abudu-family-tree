@@ -1,8 +1,16 @@
 import bioData from "../data/bios.json";
 import Title from "../shared_components/Title";
 import BioNav from "../components/BioNav";
+import settings from "../config/variables";
+import { createMedia } from "@artsy/fresnel";
+
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const defaultAvatarSrc = "./imgs/bio-page/default_avatar.jpg";
+
+const { MediaContextProvider, Media } = createMedia({
+  breakpoints: settings.breakpoints,
+});
 
 const kebabCase = (string) => {
   return string
@@ -24,20 +32,44 @@ const BioPage = () => {
       <Title style={{ margin: "0 rem", textAlign: "center" }}>
         Family Members
       </Title>
-      {
-        <BioNav
-          people={sortedBioData}
-          render={(person) => (
-            <li>
-              <a className="unstyled-link" href={`#${kebabCase(person.name)}`}>
-                {person.name}
-              </a>
-            </li>
-          )}
-        />
-      }
+
+      <MediaContextProvider>
+        <Media at="sm">
+          <BioNav
+            columns={2}
+            people={sortedBioData}
+            render={(person) => (
+              <li style={{ listStyleType: "square" }}>
+                <a
+                  className="unstyled-link"
+                  href={`#${kebabCase(person.name)}`}
+                >
+                  {person.name}
+                </a>
+              </li>
+            )}
+          />
+        </Media>
+        <Media greaterThanOrEqual="md">
+          <BioNav
+            people={sortedBioData}
+            columns={3}
+            render={(person) => (
+              <li style={{ listStyleType: "square" }}>
+                <a
+                  className="unstyled-link"
+                  href={`#${kebabCase(person.name)}`}
+                >
+                  {person.name}
+                </a>
+              </li>
+            )}
+          />
+        </Media>
+      </MediaContextProvider>
+
       <div>
-        <ul style={{ padding: 0 }}>
+        <ul style={{ padding: 0, marginBottom: "4rem" }}>
           {sortedBioData.map((bioObj) => (
             <li
               className="bio-page__people-list-item"
@@ -48,7 +80,7 @@ const BioPage = () => {
               }}
             >
               <div style={{ paddingTop: "30px" }}>
-                <img
+                <LazyLoadImage
                   id={kebabCase(bioObj.name)}
                   className="bio-page__image"
                   alt={`${bioObj.name}`}
@@ -66,7 +98,6 @@ const BioPage = () => {
             </li>
           ))}
         </ul>
-        <div style={{ margin: "3rem" }}></div>
         <div
           style={{
             position: "fixed",
