@@ -13,6 +13,13 @@ import HomePage from "./pages/HomePage";
 import Title from "./shared_components/Title";
 import settings from "./config/variables";
 
+import {
+  ApolloClient,
+  ApolloProvider,
+  HttpLink,
+  InMemoryCache,
+} from "@apollo/client";
+
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: settings.breakpoints,
 });
@@ -29,6 +36,23 @@ const logoStyle = {
   color: "#58336C",
   fontSize: "1.3rem",
   fontFamily: "'Zen Antique', serif",
+};
+
+const HASURA_ADMIN_SECRET =
+  "nW4J0djTpfTLZ3uUlle7obIqLx0Deiy0JT6EQweUdbWMhRckCww36nAEWhPfpeMz"; // process.env.REACT_APP_HASURA_SECRET;
+
+const createApolloClient = (authToken) => {
+  console.table({ authToken });
+  return new ApolloClient({
+    link: new HttpLink({
+      uri: "https://abu-ata-family-site.hasura.app/v1/graphql",
+      headers: {
+        "x-hasura-admin-secret": authToken,
+        // Authorization: `Bearer ${authToken}`,
+      },
+    }),
+    cache: new InMemoryCache(),
+  });
 };
 
 const FamilyTreePage = () => {
@@ -127,20 +151,24 @@ const Header = () => {
 };
 
 export default function App() {
+  const client = createApolloClient(HASURA_ADMIN_SECRET);
+
   return (
-    <Router>
-      <div className="App">
-        <Header />
-      </div>
-      <Switch>
-        {links.map((linkObj) => {
-          return <Route path={linkObj.url}>{linkObj.component}</Route>;
-        })}
-        <Route path="/">
-          <HomePage />
-        </Route>
-      </Switch>
-    </Router>
+    <ApolloProvider client={client}>
+      <Router>
+        <div className="App">
+          <Header />
+        </div>
+        <Switch>
+          {links.map((linkObj) => {
+            return <Route path={linkObj.url}>{linkObj.component}</Route>;
+          })}
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
+      </Router>
+    </ApolloProvider>
   );
 }
 
