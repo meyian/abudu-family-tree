@@ -1,20 +1,21 @@
 import Poll from "react-polls";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useQuery, gql, useMutation } from "@apollo/client";
 
-const pollQuestion = "Which project should we tackle?";
+const pollQuestion = "Which Naaga improvement project should we tackle?";
 
 const GET_VOTES = gql`
   query MyQuery {
-    polls {
+    polls(where: { poll_name: { _eq: "naaga_initiative" } }) {
       poll_name
       poll_data
+      id
     }
   }
 `;
 
 const UPDATE_VOTE_COUNT = gql`
-  mutation MyMutation($data: String!) {
+  mutation MyMutation($data: jsonb!) {
     update_polls(
       where: { poll_name: { _eq: naaga_initiative } }
       _set: { poll_data: $data }
@@ -25,18 +26,24 @@ const UPDATE_VOTE_COUNT = gql`
 `;
 
 const AboutPage = () => {
-  const { loading, error, voteData } = useQuery(GET_VOTES);
+  const { loading, error, data } = useQuery(GET_VOTES);
   const [updateVoteCount] = useMutation(UPDATE_VOTE_COUNT);
   const [pollAnswers, setPollAnswers] = useState([]);
 
-  console.log(error);
+  useEffect(() => {
+    if (data) {
+      const queryDataStr = data.polls[0].poll_data;
+      const queryData = JSON.parse(queryDataStr);
 
-  if (voteData) {
-    console.log(voteData);
-    // setPollAnswers();
-  }
-  const updateDBVoteCount = (voteData) => {
-    updateVoteCount({ variables: { data: voteData } });
+      console.log("queryData");
+      console.log(queryData);
+
+      setPollAnswers(queryData);
+    }
+  }, [data]);
+
+  const updateDBVoteCount = (newData) => {
+    updateVoteCount({ variables: { data: JSON.stringify(newData) } });
   };
 
   const handleVote = (voteAnswer) => {
@@ -45,7 +52,7 @@ const AboutPage = () => {
       return answer;
     });
 
-    updateDBVoteCount({ voteData: newPollAnswers });
+    updateDBVoteCount(pollAnswers);
     setPollAnswers(newPollAnswers);
   };
 

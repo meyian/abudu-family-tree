@@ -82,6 +82,8 @@ const BioPage = () => {
               <div style={{ paddingTop: "30px" }}>
                 <LazyLoadImage
                   id={kebabCase(bioObj.name)}
+                  height={bioObj.img_src.height || defaultAvatarSrc.height}
+                  width={bioObj.img_src.width || defaultAvatarSrc.width}
                   className="bio-page__image"
                   alt={`${bioObj.name}`}
                   src={bioObj.img_src || defaultAvatarSrc}
