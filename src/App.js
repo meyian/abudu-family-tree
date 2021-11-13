@@ -38,8 +38,7 @@ const logoStyle = {
   fontFamily: "'Zen Antique', serif",
 };
 
-const HASURA_ADMIN_SECRET =
-  "nW4J0djTpfTLZ3uUlle7obIqLx0Deiy0JT6EQweUdbWMhRckCww36nAEWhPfpeMz"; // process.env.REACT_APP_HASURA_SECRET;
+const HASURA_ADMIN_SECRET = process.env.REACT_APP_HASURA_SECRET;
 
 const createApolloClient = (authToken) => {
   console.table({ authToken });
@@ -109,7 +108,7 @@ const Header = () => {
           : { marginLeft: "2rem" };
 
       return (
-        <li style={listItemStyle}>
+        <li key={linkObj.name} style={listItemStyle}>
           <Link to={linkObj.url} style={linkStyle}>
             {linkObj.name}
           </Link>
@@ -161,7 +160,11 @@ export default function App() {
         </div>
         <Switch>
           {links.map((linkObj) => {
-            return <Route path={linkObj.url}>{linkObj.component}</Route>;
+            return (
+              <Route key={linkObj.url} path={linkObj.url}>
+                {linkObj.component}
+              </Route>
+            );
           })}
           <Route path="/">
             <HomePage />

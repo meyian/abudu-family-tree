@@ -3,21 +3,15 @@ import Title from "../shared_components/Title";
 import BioNav from "../components/BioNav";
 import settings from "../config/variables";
 import { createMedia } from "@artsy/fresnel";
+import { kebabCase } from "../config/lib";
 
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import LazyLoad from "react-lazyload";
 
 const defaultAvatarSrc = "./imgs/bio-page/default_avatar.jpg";
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: settings.breakpoints,
 });
-
-const kebabCase = (string) => {
-  return string
-    .replace(/([a-z])([A-Z])/g, "$1-$2")
-    .replace(/\s+/g, "-")
-    .toLowerCase();
-};
 
 const BioPage = () => {
   const sortedBioData = bioData.sort((a, b) => {
@@ -39,14 +33,9 @@ const BioPage = () => {
             columns={2}
             people={sortedBioData}
             render={(person) => (
-              <li style={{ listStyleType: "square" }}>
-                <a
-                  className="unstyled-link"
-                  href={`#${kebabCase(person.name)}`}
-                >
-                  {person.name}
-                </a>
-              </li>
+              <a className="unstyled-link" href={`#${kebabCase(person.name)}`}>
+                {person.name}
+              </a>
             )}
           />
         </Media>
@@ -55,14 +44,9 @@ const BioPage = () => {
             people={sortedBioData}
             columns={3}
             render={(person) => (
-              <li style={{ listStyleType: "square" }}>
-                <a
-                  className="unstyled-link"
-                  href={`#${kebabCase(person.name)}`}
-                >
-                  {person.name}
-                </a>
-              </li>
+              <a className="unstyled-link" href={`#${kebabCase(person.name)}`}>
+                {person.name}
+              </a>
             )}
           />
         </Media>
@@ -72,6 +56,7 @@ const BioPage = () => {
         <ul style={{ padding: 0, marginBottom: "4rem" }}>
           {sortedBioData.map((bioObj) => (
             <li
+              key={kebabCase(bioObj.name)}
               className="bio-page__people-list-item"
               style={{
                 display: "flex",
@@ -80,19 +65,21 @@ const BioPage = () => {
               }}
             >
               <div style={{ paddingTop: "30px" }}>
-                <LazyLoadImage
-                  id={kebabCase(bioObj.name)}
-                  height={bioObj.img_src.height || defaultAvatarSrc.height}
-                  width={bioObj.img_src.width || defaultAvatarSrc.width}
-                  className="bio-page__image"
-                  alt={`${bioObj.name}`}
-                  src={bioObj.img_src || defaultAvatarSrc}
-                  style={
-                    bioObj.img_src
-                      ? {}
-                      : { border: "2px solid #000", borderRadius: "9px" }
-                  }
-                />
+                <LazyLoad height={200}>
+                  <img
+                    id={kebabCase(bioObj.name)}
+                    height={bioObj.img_src.height || defaultAvatarSrc.height}
+                    width={bioObj.img_src.width || defaultAvatarSrc.width}
+                    className="bio-page__image"
+                    alt={`${bioObj.name}`}
+                    src={bioObj.img_src || defaultAvatarSrc}
+                    style={
+                      bioObj.img_src
+                        ? {}
+                        : { border: "2px solid #000", borderRadius: "9px" }
+                    }
+                  />
+                </LazyLoad>
               </div>
               <div style={{ marginTop: "1rem" }} className="bio-page__bio">
                 {bioObj.bio}

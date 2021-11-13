@@ -1,5 +1,11 @@
+import { kebabCase } from "../config/lib";
+
 const BioNav = ({ people, render, columns = 3 }) => {
-  const renderedPeople = people.map((person) => render(person));
+  const renderedPeople = people.map((person) => (
+    <li key={kebabCase(person.name)} style={{ listStyleType: "square" }}>
+      {render(person)}
+    </li>
+  ));
 
   return (
     <div
