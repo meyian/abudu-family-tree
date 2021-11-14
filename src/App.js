@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/styles.css";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { createMedia } from "@artsy/fresnel";
 
 import FamilyChart from "./pages/FamilyTreePage";
