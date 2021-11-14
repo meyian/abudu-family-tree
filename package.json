@@ -2,6 +2,7 @@
   "name": "abudu-family-tree",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@apollo/client": "^3.4.17",
     "@artsy/fresnel": "^1.9.0",
