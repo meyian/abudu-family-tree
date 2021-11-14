@@ -1,17 +1,11 @@
 import bioData from "../data/bios.json";
 import Title from "../shared_components/Title";
-import BioNav from "../components/BioNav";
-import settings from "../config/variables";
-import { createMedia } from "@artsy/fresnel";
-import { kebabCase } from "../config/lib";
+// import BioNav from "../components/BioNav";
+// import { kebabCase } from "../config/lib";
 
-import LazyLoad from "react-lazyload";
+// import LazyLoad from "react-lazyload";
 
 const defaultAvatarSrc = "./imgs/bio-page/default_avatar.jpg";
-
-const { MediaContextProvider, Media } = createMedia({
-  breakpoints: settings.breakpoints,
-});
 
 const BioPage = () => {
   const sortedBioData = bioData.sort((a, b) => {
