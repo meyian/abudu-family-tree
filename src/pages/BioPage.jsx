@@ -27,14 +27,7 @@ const BioPage = () => {
         Family Members
       </Title>
 
-      <MediaContextProvider>
-        <Media at="sm">
-          <h2>Small</h2>
-        </Media>
-        <Media greaterThanOrEqual="md">
-          <h2>Full Page</h2>
-        </Media>
-      </MediaContextProvider>
+      {window.innerWidth <= 426 ? <h2>Small</h2> : <h2>Full Page</h2>}
     </div>
   );
 };
