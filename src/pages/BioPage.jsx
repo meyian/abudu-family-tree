@@ -27,31 +27,6 @@ const BioPage = () => {
         Family Members
       </Title>
 
-      <MediaContextProvider>
-        <Media at="sm">
-          <BioNav
-            columns={2}
-            people={sortedBioData}
-            render={(person) => (
-              <a className="unstyled-link" href={`#${kebabCase(person.name)}`}>
-                {person.name}
-              </a>
-            )}
-          />
-        </Media>
-        <Media greaterThanOrEqual="md">
-          <BioNav
-            people={sortedBioData}
-            columns={3}
-            render={(person) => (
-              <a className="unstyled-link" href={`#${kebabCase(person.name)}`}>
-                {person.name}
-              </a>
-            )}
-          />
-        </Media>
-      </MediaContextProvider>
-
       <div>
         <ul style={{ padding: 0, marginBottom: "4rem" }}>
           {sortedBioData.map((bioObj) => (
