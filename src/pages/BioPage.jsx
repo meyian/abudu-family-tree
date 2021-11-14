@@ -29,26 +29,10 @@ const BioPage = () => {
 
       <MediaContextProvider>
         <Media at="sm">
-          <BioNav
-            columns={2}
-            people={sortedBioData}
-            render={(person) => (
-              <a className="unstyled-link" href={`#${kebabCase(person.name)}`}>
-                {person.name}
-              </a>
-            )}
-          />
+          <h2>Small</h2>
         </Media>
         <Media greaterThanOrEqual="md">
-          <BioNav
-            people={sortedBioData}
-            columns={3}
-            render={(person) => (
-              <a className="unstyled-link" href={`#${kebabCase(person.name)}`}>
-                {person.name}
-              </a>
-            )}
-          />
+          <h2>Full Page</h2>
         </Media>
       </MediaContextProvider>
     </div>
