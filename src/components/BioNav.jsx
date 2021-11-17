@@ -21,7 +21,7 @@ const BioNav = ({ people, render, columns = 3 }) => {
         style={{
           marginLeft: `${columns === 2 ? null : "1.5rem"}`,
           display: "grid",
-          gridTemplateRows: `repeat(${columns === 2 ? 15 : 10}, 1fr)`,
+          gridTemplateRows: `repeat(${columns === 2 ? 18 : 12}, 1fr)`,
           gridTemplateColumns: `repeat(${columns}, 1fr)`,
           gridAutoFlow: "column",
           gridGap: "10px 30px",
