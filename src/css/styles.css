@@ -131,3 +131,6 @@ svg.main_svg text {
 .bio-page__bio {
   max-width: 600px;
 }
+
+.ed-fund-page tr:nth-child(even) {background: rgba(184, 104, 0, 0.4)}
+.ed-fund-page tr:nth-child(odd) {background: none}

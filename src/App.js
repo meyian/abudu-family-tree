@@ -4,6 +4,7 @@ import "./css/styles.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { createMedia } from "@artsy/fresnel";
 
+import EducationFundPage from "./pages/EducationFundPage";
 import FamilyChart from "./pages/FamilyTreePage";
 import BioPage from "./pages/BioPage";
 import AboutPage from "./pages/AboutPage";
@@ -87,6 +88,11 @@ const links = [
     name: "About Us",
     url: "/about",
     component: <AboutPage />,
+  },
+  {
+    name: "Education Fund",
+    url: "/education-fund",
+    component: <EducationFundPage />,
   },
 ];
 
