@@ -24,6 +24,7 @@ const EducationFundPage = () => {
             If you'd like to do a bank transfer, kindly get in touch via
             WhatsApp on the same number for further details.
           </p>
+          <p>The deadline to register is March 10.</p>
         </div>
         <div style={{ maxWidth: "600px", margin: "0 1rem" }}>
           <table>
