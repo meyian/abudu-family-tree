@@ -2,12 +2,16 @@ import "../css/styles.css";
 
 const data = [
   {
-    id: "16356537019",
+    id: "16356537019", // tony
     amount: "150.00",
   },
   {
-    id: "16383309743",
+    id: "16383309743", // francis
     amount: "122.00",
+  },
+  {
+    id: "16398588679", // bismark
+    amount: "130.00",
   },
 ];
 
