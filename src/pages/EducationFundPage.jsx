@@ -1,5 +1,16 @@
 import "../css/styles.css";
 
+const data = [
+  {
+    id: "16356537019",
+    amount: "150.00",
+  },
+  {
+    id: "16383309743",
+    amount: "122.00",
+  },
+];
+
 const EducationFundPage = () => {
   return (
     <div className="ed-fund-page">
@@ -32,10 +43,12 @@ const EducationFundPage = () => {
               <th>Transaction ID #</th>
               <th>Amount (GHS)</th>
             </tr>
-            <tr>
-              <td>16356537019</td>
-              <td>150.00</td>
-            </tr>
+            {data.map((datum) => (
+              <tr>
+                <td>{datum.id}</td>
+                <td>{datum.amount}</td>
+              </tr>
+            ))}
           </table>
         </div>
       </div>
