@@ -13,6 +13,10 @@ const data = [
     id: "16398588679", // bismark
     amount: "130.00",
   },
+  {
+    id: "16438730820", // derrick
+    amount: "504.00",
+  },
 ];
 
 const EducationFundPage = () => {
